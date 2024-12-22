@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+
+body {
+  padding: 50px;
+}
+.fan {
+  box-sizing: border-box;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  animation: fan-rotate 1.5s linear infinite;
+}
+.fan::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-color: rgb(52, 218, 144);
+  box-shadow: 0 0 2px;
+  border-radius: 50%;
+}
+.blade {
+  position: absolute;
+  width: 26px;
+  height: 30px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 15px;
+  background-color: #e15611;
+}
+.blade-1 {
+  top: -12px;
+  left: -14px;
+}
+.blade-2 {
+  top: -8px;
+  right: -14px;
+  transform: rotate(120deg);
+}
+.blade-3 {
+  top: 16px;
+  width: 26px;
+  transform: rotate(240deg);
+}
+
+@keyframes fan-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
